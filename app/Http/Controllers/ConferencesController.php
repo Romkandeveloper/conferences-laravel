@@ -9,6 +9,7 @@ class ConferencesController extends Controller
 {
     public function index()
     {
-
+        $conferences = Conference::all();
+        return view('index', ['title' => 'Conferences', 'conferences' => $conferences]);
     }
 }

@@ -12,5 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+   return redirect()->route('conferences.index');
+});
 
-Route::get('/', 'App\Http\Controllers\ConferencesController@index');
+Route::get('/conferences', 'App\Http\Controllers\ConferencesController@index')->name('conferences.index');
